@@ -106,6 +106,11 @@ func newClientModel(config *Configuration, ctl mvc.Controller) *ClientModel {
 		m.Info("Trusting host's root certificates")
 		m.tlsConfig = &tls.Config{}
 	} else {
+		if !config.UseInsecureSkipVerify {
+			if config.UseClientCrtPath != "" {
+				rootCrtPaths = append(rootCrtPaths, config.UseClientCrtPath)
+			} 
+		}
 		m.Info("Trusting root CAs: %v", rootCrtPaths)
 		var err error
 		if m.tlsConfig, err = LoadTLSConfig(rootCrtPaths); err != nil {
@@ -115,8 +120,9 @@ func newClientModel(config *Configuration, ctl mvc.Controller) *ClientModel {
 
 	// configure TLS SNI
 	m.tlsConfig.ServerName = serverName(m.serverAddr)
-	m.tlsConfig.InsecureSkipVerify = useInsecureSkipVerify()
-
+	// 是否开启ssl证书校验
+	m.tlsConfig.InsecureSkipVerify = config.UseInsecureSkipVerify
+	
 	return m
 }
 

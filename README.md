@@ -48,3 +48,14 @@ ngrok.com ran a pay-what-you-want hosted service of 1.x from early 2013 until Ap
 
 ## Developing on ngrok
 [ngrok developer's guide](docs/DEVELOPMENT.md)
+
+
+ 
+ ### 执行
+export GOPATH=/Users/marker/WORK/git/ngrok && go run -tags 'release' ngrok/main/ngrok \
+ -config=/Users/marker/WORK/git/Bullet/Client/conf/domain/3weixin.yml start mp_103
+
+export GOPATH=/Users/marker/WORK/git/ngrok && go run -tags 'release' ngrok/main/ngrok  -config=/Users/marker/WORK/git/Bullet/Client/conf/domain/3weixin.yml -log=/Users/marker/WORK/git/Bullet/Client/logs/domain/3weixin.log start mp_103
+
+
+GOOS=darwin GOARCH=amd64 make release-client
