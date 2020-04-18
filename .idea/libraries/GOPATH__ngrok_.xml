@@ -1,0 +1,100 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;ngrok&gt;">
+    <CLASSES>
+      <root url="file:///DATA/SDK/go/src/context" />
+      <root url="file:///DATA/SDK/go/src/html" />
+      <root url="file:///DATA/SDK/go/src/text" />
+      <root url="file:///DATA/SDK/go/src/fmt" />
+      <root url="file:///DATA/SDK/go/src/path" />
+      <root url="file:///DATA/SDK/go/src/reflect" />
+      <root url="file:///DATA/SDK/go/src/compress" />
+      <root url="file:///DATA/SDK/go/src/io" />
+      <root url="file:///DATA/SDK/go/src/testing" />
+      <root url="file:///DATA/SDK/go/src/runtime" />
+      <root url="file:///DATA/SDK/go/src/net" />
+      <root url="file:///DATA/SDK/go/src/image" />
+      <root url="file:///DATA/SDK/go/src/debug" />
+      <root url="file:///DATA/SDK/go/src/os" />
+      <root url="file:///DATA/SDK/go/src/builtin" />
+      <root url="file:///DATA/SDK/go/src/plugin" />
+      <root url="file:///DATA/SDK/go/src/container" />
+      <root url="file:///DATA/SDK/go/src/bytes" />
+      <root url="file:///DATA/SDK/go/src/mime" />
+      <root url="file:///DATA/SDK/go/src/time" />
+      <root url="file:///DATA/SDK/go/src/go" />
+      <root url="file:///DATA/SDK/go/src/regexp" />
+      <root url="file:///DATA/SDK/go/src/syscall" />
+      <root url="file:///DATA/SDK/go/src/bufio" />
+      <root url="file:///DATA/SDK/go/src/internal" />
+      <root url="file:///DATA/SDK/go/src/hash" />
+      <root url="file:///DATA/SDK/go/src/errors" />
+      <root url="file:///DATA/SDK/go/src/database" />
+      <root url="file:///DATA/SDK/go/src/strings" />
+      <root url="file:///DATA/SDK/go/src/vendor" />
+      <root url="file:///DATA/SDK/go/src/flag" />
+      <root url="file:///DATA/SDK/go/src/expvar" />
+      <root url="file:///DATA/SDK/go/src/log" />
+      <root url="file:///DATA/SDK/go/src/unsafe" />
+      <root url="file:///DATA/SDK/go/src/sync" />
+      <root url="file:///DATA/SDK/go/src/crypto" />
+      <root url="file:///DATA/SDK/go/src/index" />
+      <root url="file:///DATA/SDK/go/src/archive" />
+      <root url="file:///DATA/SDK/go/src/sort" />
+      <root url="file:///DATA/SDK/go/src/encoding" />
+      <root url="file:///DATA/SDK/go/src/unicode" />
+      <root url="file:///DATA/SDK/go/src/cmd" />
+      <root url="file:///DATA/SDK/go/src/math" />
+      <root url="file:///DATA/SDK/go/src/strconv" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file:///DATA/SDK/go/src/context" />
+      <root url="file:///DATA/SDK/go/src/html" />
+      <root url="file:///DATA/SDK/go/src/text" />
+      <root url="file:///DATA/SDK/go/src/fmt" />
+      <root url="file:///DATA/SDK/go/src/path" />
+      <root url="file:///DATA/SDK/go/src/reflect" />
+      <root url="file:///DATA/SDK/go/src/compress" />
+      <root url="file:///DATA/SDK/go/src/io" />
+      <root url="file:///DATA/SDK/go/src/testing" />
+      <root url="file:///DATA/SDK/go/src/runtime" />
+      <root url="file:///DATA/SDK/go/src/net" />
+      <root url="file:///DATA/SDK/go/src/image" />
+      <root url="file:///DATA/SDK/go/src/debug" />
+      <root url="file:///DATA/SDK/go/src/os" />
+      <root url="file:///DATA/SDK/go/src/builtin" />
+      <root url="file:///DATA/SDK/go/src/plugin" />
+      <root url="file:///DATA/SDK/go/src/container" />
+      <root url="file:///DATA/SDK/go/src/bytes" />
+      <root url="file:///DATA/SDK/go/src/mime" />
+      <root url="file:///DATA/SDK/go/src/time" />
+      <root url="file:///DATA/SDK/go/src/go" />
+      <root url="file:///DATA/SDK/go/src/regexp" />
+      <root url="file:///DATA/SDK/go/src/syscall" />
+      <root url="file:///DATA/SDK/go/src/bufio" />
+      <root url="file:///DATA/SDK/go/src/internal" />
+      <root url="file:///DATA/SDK/go/src/hash" />
+      <root url="file:///DATA/SDK/go/src/errors" />
+      <root url="file:///DATA/SDK/go/src/database" />
+      <root url="file:///DATA/SDK/go/src/strings" />
+      <root url="file:///DATA/SDK/go/src/vendor" />
+      <root url="file:///DATA/SDK/go/src/flag" />
+      <root url="file:///DATA/SDK/go/src/expvar" />
+      <root url="file:///DATA/SDK/go/src/log" />
+      <root url="file:///DATA/SDK/go/src/unsafe" />
+      <root url="file:///DATA/SDK/go/src/sync" />
+      <root url="file:///DATA/SDK/go/src/crypto" />
+      <root url="file:///DATA/SDK/go/src/index" />
+      <root url="file:///DATA/SDK/go/src/archive" />
+      <root url="file:///DATA/SDK/go/src/sort" />
+      <root url="file:///DATA/SDK/go/src/encoding" />
+      <root url="file:///DATA/SDK/go/src/unicode" />
+      <root url="file:///DATA/SDK/go/src/cmd" />
+      <root url="file:///DATA/SDK/go/src/math" />
+      <root url="file:///DATA/SDK/go/src/strconv" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

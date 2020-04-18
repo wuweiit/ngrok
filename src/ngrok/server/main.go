@@ -51,6 +51,7 @@ func NewProxy(pxyConn conn.Conn, regPxy *msg.RegProxy) {
 }
 
 // Listen for incoming control and proxy connections
+// 8083端口 ，监听进入控制器的代理连接集合
 // We listen for incoming control and proxy connections on the same port
 // for ease of deployment. The hope is that by running on port 443, using
 // TLS and running all connections over the same port, we can bust through
@@ -73,6 +74,7 @@ func tunnelListener(addr string, tlsConfig *tls.Config) {
 			}()
 
 			tunnelConn.SetReadDeadline(time.Now().Add(connReadTimeout))
+			// 读取消息内容
 			var rawMsg msg.Message
 			if rawMsg, err = msg.ReadMsg(tunnelConn); err != nil {
 				tunnelConn.Warn("Failed to read message: %v", err)
@@ -85,19 +87,21 @@ func tunnelListener(addr string, tlsConfig *tls.Config) {
 			tunnelConn.SetReadDeadline(time.Time{})
 
 			switch m := rawMsg.(type) {
-			case *msg.Auth:
+			case *msg.Auth: // 认证
 				NewControl(tunnelConn, m)
-
-			case *msg.RegProxy:
+			case *msg.RegProxy: // 注册代理
 				NewProxy(tunnelConn, m)
 
-			default:
+			default: // 关闭通道
 				tunnelConn.Close()
 			}
 		}(c)
 	}
 }
 
+/**
+ * 主函数
+ */
 func Main() {
 	// parse options
 	opts = parseArgs()
@@ -117,25 +121,25 @@ func Main() {
 	tunnelRegistry = NewTunnelRegistry(registryCacheSize, registryCacheFile)
 	controlRegistry = NewControlRegistry()
 
-	// start listeners
+	// 开启监听
 	listeners = make(map[string]*conn.Listener)
 
-	// load tls configuration
+	// 加载 tls 配置
 	tlsConfig, err := LoadTLSConfig(opts.tlsCrt, opts.tlsKey)
 	if err != nil {
 		panic(err)
 	}
 
-	// listen for http
+	// 监听 http
 	if opts.httpAddr != "" {
 		listeners["http"] = startHttpListener(opts.httpAddr, nil)
 	}
 
-	// listen for https
+	// 监听 https
 	if opts.httpsAddr != "" {
 		listeners["https"] = startHttpListener(opts.httpsAddr, tlsConfig)
 	}
 
-	// ngrok clients
+	// ngrok 客户端
 	tunnelListener(opts.tunnelAddr, tlsConfig)
 }
